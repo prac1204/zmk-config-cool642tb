@@ -134,10 +134,10 @@
 
         Bracket+Cursor {
             bindings = <
-&kp TAB           &none              &kp LS(N8)             &kp LS(N9)         &bracket1                &kp LS(LG(S))     &kp LC(PAGE_UP)  &kp LG(Z)     &kp LC(PAGE_DOWN)  &kp LG(TAB)
-&kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &bracket2  &none  &none  &kp LG(LS(LEFT))  &mkp LCLK        &kp UP_ARROW  &mkp RCLK          &kp LG(LS(RIGHT))
-&kp LEFT_SHIFT    &none              &kp RIGHT_BRACKET      &kp BACKSLASH      &bracket3  &none  &none  &kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT          &kp END
-&trans            &trans             &trans                 &none              &none      &none  &to 2  &trans                                                              &none
+&kp LA(TAB)       &none              &kp LS(N8)             &kp LS(N9)         &bracket1                &kp LS(LG(S))  &kp LC(PAGE_UP)  &kp LG(UP_ARROW)  &kp LC(PAGE_DOWN)  &kp LG(Z)
+&kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &bracket2  &none  &none  &kp LG(LEFT)   &mkp LCLK        &kp UP_ARROW      &mkp RCLK          &kp LG(RIGHT)
+&kp LEFT_SHIFT    &none              &kp RIGHT_BRACKET      &kp BACKSLASH      &bracket3  &none  &none  &kp HOME       &kp LEFT         &kp DOWN          &kp RIGHT          &kp END
+&trans            &trans             &trans                 &none              &none      &none  &to 2  &trans                                                               &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
