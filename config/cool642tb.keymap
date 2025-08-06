@@ -144,7 +144,7 @@
 &trans     &trans                &trans       &trans                   &trans            &trans  &to 0  &trans                                                &kp INT3
             >;
 
-            sensor-bindings = <encoder_msc_right_left>;
+            sensor-bindings = <&encoder_msc_right_left>;
         };
 
         Bracket+Cursor {
