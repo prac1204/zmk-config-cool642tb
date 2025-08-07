@@ -85,21 +85,6 @@
             label = "BRACKET3";
         };
 
-        alt_tab_hold: alt_tab_hold {
-            compatible = "zmk,behavior-macro";
-            label = "ALT_TAB_HOLD";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LALT>;
-   // ALTキーを解除
-        };
-
         bracket4: bracket4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
