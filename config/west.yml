@@ -4,7 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: telzo2000
       url-base: https://github.com/telzo2000
-      remotes:
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
   projects:
