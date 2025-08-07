@@ -74,16 +74,6 @@
             bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
             label = "BRACKET3";
         };
-
-        alt_tab_hold: alt_tab_hold {
-            compatible = "zmk,behavior-macro";
-            label = "ALT_TAB_HOLD";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>      // ALTキーを押下状態にする
-                     , <&macro_tap &kp TAB>         // TABキーをタップ
-                     , <&macro_pause_for_release>   // キーが離されるまで待機
-                     , <&macro_release &kp LALT>;   // ALTキーを解除
-        };
     };
 
     behaviors {
@@ -118,6 +108,14 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+        };
+
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <0 1 2 19 30 31 32 41>;  // Shift+Tabなどを許可
         };
     };
 
@@ -159,7 +157,7 @@
 
         Bracket+Cursor {
             bindings = <
-&alt_tab_hold     &kp LG(UP_ARROW)  &kp LS(N8)             &kp LS(N9)         &bracket1                &kp LS(LG(S))     &kp LC(PAGE_UP)  &none         &kp LC(PAGE_DOWN)  &kp LG(Z)
+&swapper     &kp LG(UP_ARROW)  &kp LS(N8)             &kp LS(N9)         &bracket1                &kp LS(LG(S))     &kp LC(PAGE_UP)  &none         &kp LC(PAGE_DOWN)  &kp LG(Z)
 &kp LG(LEFT)    &kp LG(RIGHT)     &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &bracket2  &none  &none  &kp LG(LS(LEFT))  &mkp LCLK        &kp UP_ARROW  &mkp RCLK          &kp LG(LS(RIGHT))
 &kp LEFT_SHIFT  &kp LG(DOWN)      &kp RIGHT_BRACKET      &kp BACKSLASH      &bracket3  &none  &none  &kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT          &kp END
 &trans          &trans            &trans                 &none              &none      &none  &to 2  &trans                                                              &none
