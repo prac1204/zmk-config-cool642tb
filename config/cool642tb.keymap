@@ -180,7 +180,7 @@
         Symbol+Mouse {
             bindings = <
 &kp ESC    &kp LS(SEMI)          &kp LS(SQT)  &kp LS(N5)               &kp LS(NUMBER_3)                 &mkp MB5  &kp INT1   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp MINUS
-&kp EQUAL  &kp LS(N1)            &kp LS(N6)   &kp LS(INTERNATIONAL_3)  &kp LS(N4)        &none   &none  &mkp MB4  &mkp LCLK  &mo 4          &mkp RCLK         &kp SINGLE_QUOTE
+&kp EQUAL  &kp LS(N1)            &kp LS(N6)   &kp LS(INTERNATIONAL_3)  &kp LS(N4)        &none   &none  &mkp MB4  &mkp LCLK  &mo 6          &mkp RCLK         &kp SINGLE_QUOTE
 &kp LSHFT  &kp LS(LEFT_BRACKET)  &kp LS(N7)   &kp LS(N2)               &bracket4         &none   &none  &none     &kp PG_UP  &mkp MB3       &kp PG_DN         &kp SEMI
 &trans     &trans                &trans       &trans                   &trans            &trans  &to 0  &trans                                                &kp INT3
             >;
